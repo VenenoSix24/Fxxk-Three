@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuck Three</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 106vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #6eb6ff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container h1 {
+            width: 260px;
+        }
+
+        .container input {
+            width: 260px;
+            height: 50px;
+            color: #000;
+            border: 2px solid #fff;
+            background-color: #fff;
+            border-radius: 25px;
+            outline: none;
+            text-indent: 15px;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .container input::placeholder {
+            color: #aaa;
+        }
+
+        .container button {
+            width: 120px;
+            height: 50px;
+            border: 2px solid #fff;
+            background: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            /* 过渡效果 */
+            transition: 0.2s;
+            padding: 0px;
+        }
+
+        .container button:hover {
+            background-color: #fff;
+            color: #6eb6ff;
+            cursor: pointer;
+        }
+
+        /* 输入框验证失败时 */
+        .container input:invalid {
+            color: #ff5f5f;
+            border-color: #ff5f5f;
+            background-color: #ffdfdf;
+            /* 执行动画：动画名 时长 加速后减速 重复执行2次 */
+            animation: shake 0.2s ease-in-out 2;
+        }
+
+        /* 定义动画 */
+        @keyframes shake {
+            0% {
+                margin-left: 0;
+            }
+
+            25% {
+                margin-left: 8px;
+            }
+
+            50% {
+                margin-left: 0;
+            }
+
+            75% {
+                margin-left: -8px;
+            }
+
+            100% {
+                margin-left: 0;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* .buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin: 10px;
+        } */
+
+        p {
+            /* border: 1px solid #ccc; */
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 38px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: -90px;
+            height: 0vh;
+        }
+
+        .textstyle {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            position: relative;
+            top: -25px;
+            height: 0vh;
+        }
+
+        .author {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .linkcolor {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="textstyle">当前数字为</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="result" id="numberInput">1</p>
+        <p class="textstyle">所以你应该</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="result" id="resultOutput">1</p>
+        <br>
+        <div class="buttons">
+            <button onclick="previousNumber()">上一个</button>
+            <button onclick="nextNumber()">下一个</button>
+        </div>
+        <div>
+            <p style="font-size: 12px;" class="author">Designed by <a href="https://venenosix24.github.io"
+                    class="linkcolor">VenenoSix24</a><br>Powered
+                by <a href="https://www.retiehe.com/" class="linkcolor">Retinbox Software</a></p>
+        </div>
+
+    </div>
+    <script>
+        let currentNumber = 1;
+        const numberInput = document.getElementById('numberInput');
+        const resultOutput = document.getElementById('resultOutput');
+        function previousNumber() {
+            if (currentNumber > 1) {
+                currentNumber--;
+                updateNumber();
+            }
+        }
+        function nextNumber() {
+            if (currentNumber < 200) {
+                currentNumber++;
+                updateNumber();
+            }
+        }
+        function updateNumber() {
+            numberInput.innerText = currentNumber;
+            if (currentNumber % 3 === 0 || currentNumber.toString().includes('3')) {
+                resultOutput.innerText = '拍手';
+            } else {
+                resultOutput.innerText = currentNumber;
+            }
+        }
+    </script>
+</body>
+
+</html>

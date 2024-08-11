@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="fuwu.css">
+    <title>Fuck Three</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: '';
+            background: #6eb6ff;
+            width: 120px;
+            height: 6px;
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 30px;
+            height: 100px;
+            box-shadow: 10px 10px 30px 0px lightgray;
+            border-radius: 10px;
+
+            transition: 0.4s;
+        }
+
+        .row a {
+            text-decoration: none;
+        }
+
+        .content i {
+            font-size: 25px;
+            color: black;
+        }
+
+        .content h2 {
+            padding: 0px 10px;
+            color: black;
+        }
+
+        .content:hover {
+            scale: 0.97;
+            box-shadow: none;
+            background: #6eb6ff;
+        }
+
+        .content:hover h2 {
+            color: white;
+        }
+
+        .content:hover i {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>选择工作模式</h1>
+
+        <div class="row">
+
+            <a href="fuckthreei.html">
+                <div class="content">
+                    <i class="fa-solid fa-computer"></i>
+                    <h2>输入模式</h2>
+                </div>
+            </a>
+
+            <a href="fuckthrees.html">
+                <div class="content">
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>顺序模式</h2>
+                </div>
+            </a>
+
+            <a href="threebook.html">
+                <div class="content">
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>三字经书</h2>
+                </div>
+            </a>
+
+            <a href="https://venenosix24.github.io/about/">
+                <div class="content">
+                    <i class="fa-solid fa-palette"></i>
+                    <h2>关于作者</h2>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</body>
+
+</html>
