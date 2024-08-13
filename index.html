@@ -2,10 +2,6 @@
 <html>
 
 <head>
-    
-     
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.3, maxmum-scale=1.0, minimum-scale=0.3">
-
     <link rel="stylesheet" href="fuwu.css">
     <title>Fuck Three</title>
     <style>
@@ -39,9 +35,12 @@
         }
 
         .row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 垂直和水平居中（如果需要） */
+            gap: 40px;
+            /* 替代 grid-gap */
         }
 
         .content {
@@ -49,6 +48,7 @@
             justify-content: center;
             align-items: center;
             margin: 0px 30px;
+            width: 270px;
             height: 100px;
             box-shadow: 10px 10px 30px 0px lightgray;
             border-radius: 10px;
@@ -114,7 +114,7 @@
                 </div>
             </a>
 
-            <a href="https://venenosix24.github.io/about/">
+            <a href="https://blog.venenosix24.us.kg/about/">
                 <div class="content">
                     <i class="fa-solid fa-palette"></i>
                     <h2>关于作者</h2>
