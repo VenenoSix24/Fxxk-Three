@@ -16,7 +16,7 @@
    
 ### 工具界面
 
-[![](https://github.com/VenenoSix24/Fxxk-Three/blob/main/Intro%20pic.jpg?raw=true)](https://github.com/VenenoSix24/Fxxk-Three/blob/main/Intro%20pic.jpg?raw=true)
+[![](https://raw.githubusercontent.com/VenenoSix24/Fxxk-Three/main/screenshots/Intro%20pic.jpg)](https://raw.githubusercontent.com/VenenoSix24/Fxxk-Three/main/screenshots/Intro%20pic.jpg)
 
 ### 未来计划
 
